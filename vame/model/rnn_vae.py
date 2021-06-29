@@ -102,7 +102,7 @@ def train(train_loader, epoch, model, optimizer, anneal_function, BETA, kl_start
     fut_loss = 0.0
     loss = 0.0
     seq_len_half = int(seq_len / 2)
-
+    idx = 0
     for idx, data_item in enumerate(train_loader):
         data_item = Variable(data_item)
         data_item = data_item.permute(0,2,1)
